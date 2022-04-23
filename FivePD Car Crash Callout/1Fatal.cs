@@ -8,7 +8,7 @@ using CitizenFX.Core.Native;
 
 
 
-[CalloutProperties("Vehicle Collision (1 Death)", "GGGDunlix", "1.2.2")]
+[CalloutProperties("Vehicle Collision (1 Death)", "GGGDunlix", "1.2.3")]
 public class CarCrash1Fatal : FivePD.API.Callout
 {
     private Ped driver1, driver2;
@@ -19,8 +19,8 @@ public class CarCrash1Fatal : FivePD.API.Callout
         InitInfo(World.GetNextPositionOnStreet(Vector3Extension.Around(Game.PlayerPed.Position, 400)));
 
         ShortName = "Vehicle Collision";
-        CalloutDescription = "A vehicle collision has occured with unknown injuries. Get the location and assess. ";
-        ResponseCode = 2;
+        CalloutDescription = "A vehicle collision has occured with unknown injuries. Get the location and assess. Respond in Code 3.";
+        ResponseCode = 3;
         StartDistance = 150f;
     }
 
