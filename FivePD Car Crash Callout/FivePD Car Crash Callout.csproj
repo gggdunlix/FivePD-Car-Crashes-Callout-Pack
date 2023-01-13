@@ -56,6 +56,10 @@
     <Compile Include="2Fatal.cs" />
     <Compile Include="1Fatal.cs" />
     <Compile Include="0Fatal.cs" />
+    <Compile Include="HitRunBikeFatal.cs" />
+    <Compile Include="HitRunBikeNormal.cs" />
+    <Compile Include="HitRunFatal.cs" />
+    <Compile Include="HitRunNormal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,7 +8,7 @@ using CitizenFX.Core.Native;
 
 
 
-[CalloutProperties("Vehicle Collision", "GGGDunlix", "1.2.3")]
+[CalloutProperties("Vehicle Collision", "GGGDunlix", "3.0.0")]
 public class CarCrash : FivePD.API.Callout
 {
     private Ped driver1, driver2;
@@ -27,6 +27,13 @@ public class CarCrash : FivePD.API.Callout
     public override async Task OnAccept()
     {
         InitBlip(25);
+        UpdateData();
+
+    }
+
+    public async override void OnStart(Ped player)
+    {
+        base.OnStart(player);
 
         var cars = new[]
           {
@@ -79,13 +86,6 @@ public class CarCrash : FivePD.API.Callout
 
         driver2.AlwaysKeepTask = true;
         driver2.BlockPermanentEvents = true;
-
-    }
-
-    public override void OnStart(Ped player)
-    {
-        base.OnStart(player);
-
         car1.Deform(Location, 10000, 100);
         car2.Deform(Location, 10000, 100);
         World.ShootBullet(Location, car1.Position, Game.PlayerPed, WeaponHash.RayPistol, 0);
